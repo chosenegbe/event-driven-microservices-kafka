@@ -1,0 +1,4 @@
+com/microservices/kafka/producer/config/kafkaProducerConfig.class
+com/microservices/kafka/producer/service/impl/TwitterKafkaProducer.class
+com/microservices/kafka/producer/service/impl/TwitterKafkaProducer$1.class
+com/microservices/kafka/producer/service/KafkaProducer.class
