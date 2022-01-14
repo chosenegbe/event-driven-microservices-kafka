@@ -1,0 +1,11 @@
+spring:
+  profiles:
+    active: composite
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: file://Users/megbe/Documents/eventsKafka/config-server-repository

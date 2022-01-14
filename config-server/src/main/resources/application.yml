@@ -1,0 +1,18 @@
+server:
+  port: 8888
+
+logging:
+  level:
+    ROOT: INFO
+    org.spring.framework.cloud.config: DEBUG
+spring:
+  profiles:
+    active: native
+  cloud:
+    compatibility-verifier:
+      enabled: false
+    config:
+      server:
+        composite:
+          - type: native
+            search-locations: file://Users/megbe/Documents/eventsKafka/config-server-repository

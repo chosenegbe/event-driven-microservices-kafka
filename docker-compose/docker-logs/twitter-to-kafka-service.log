@@ -1,8 +1,10 @@
-2021-11-27 22:17:23 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-2021-11-27 22:17:23 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 11.0.13 on c5cd9ce76b62 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
-2021-11-27 22:17:23 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
-2021-11-27 22:17:47 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
-	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
+2021-11-30 20:54:04 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-11-30 20:54:04 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 11.0.13 on a45423c886bb with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
+2021-11-30 20:54:04 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
+2021-11-30 20:54:15 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4306f480-fe14-3144-bb71-83d602fa796e
+2021-11-30 20:54:17 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.retry.annotation.RetryConfiguration' of type [org.springframework.retry.annotation.RetryConfiguration$$EnhancerBySpringCGLIB$$ecbf83d0] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-11-30 20:54:21 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
+	bootstrap.servers = [kafka-broker-2:9092, kafka-broker-3:9092]
 	client.dns.lookup = use_all_dns_ips
 	client.id = 
 	connections.max.idle.ms = 300000
@@ -57,224 +59,55 @@
 	ssl.truststore.password = null
 	ssl.truststore.type = JKS
 
-2021-11-27 22:17:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
-2021-11-27 22:17:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
-2021-11-27 22:17:49 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1638051469779
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:50 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:51 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:51 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:51 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:51 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:52 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:52 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:52 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:53 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:53 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:53 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:54 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:54 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:17:54 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:18:11 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
-2021-11-27 22:18:11 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 60.057 seconds (JVM running for 76.44)
-2021-11-27 22:18:11 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Application Starts
-2021-11-27 22:18:11 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Creating 1 topic(s), attempt 0
-2021-11-27 22:18:11 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:18:13 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:18:18 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:18:26 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:18:26 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+2021-11-30 20:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
+2021-11-30 20:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
+2021-11-30 20:54:23 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1638305663176
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:23 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:24 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:24 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:25 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:25 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:26 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-2/172.20.0.5:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:26 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
+2021-11-30 20:54:33 [main] WARN  o.s.b.w.r.c.AnnotationConfigReactiveWebServerApplicationContext - Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'compositeCompatibilityVerifier' defined in class path resource [org/springframework/cloud/configuration/CompatibilityVerifierAutoConfiguration.class]: Bean instantiation via factory method failed; nested exception is org.springframework.beans.BeanInstantiationException: Failed to instantiate [org.springframework.cloud.configuration.CompositeCompatibilityVerifier]: Factory method 'compositeCompatibilityVerifier' threw exception; nested exception is org.springframework.cloud.configuration.CompatibilityNotMetException
+2021-11-30 20:54:33 [main] INFO  c.m.k.p.s.impl.TwitterKafkaProducer - Closing kafka producer
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.c.a.i.AdminMetadataManager - [AdminClient clientId=adminclient-1] Metadata update failed
+org.apache.kafka.common.errors.TimeoutException: Timed out waiting to send the call. Call: fetchMetadata
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.k.clients.admin.KafkaAdminClient - [AdminClient clientId=adminclient-1] Timed out 1 remaining operation(s) during close.
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
+2021-11-30 20:54:34 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+2021-11-30 20:54:34 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
 
 Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-11-27 22:18:26 [main] ERROR o.s.boot.SpringApplication - Application run failed
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
-Caused by: com.microservices.kafka.admin.exception.KafkaClientException: Reached the max number of retry for reading kafka topic(s)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:99)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.checkTopicsCreated(KafkaAdminClient.java:63)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.createTopic(KafkaAdminClient.java:52)
-	at com.microservices.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:25)
-	at com.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:33)
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
-	... 13 common frames omitted
-2021-11-27 22:18:26 [main] INFO  c.m.k.p.s.impl.TwitterKafkaProducer - Closing kafka producer
-2021-11-27 22:18:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
-2021-11-27 22:18:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2021-11-27 22:18:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2021-11-27 22:18:26 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
-2021-11-27 22:52:41 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
-2021-11-27 22:52:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Starting TwitterToKafkaServiceApplication v0.0.1-SNAPSHOT using Java 11.0.13 on 6b0d4c984775 with PID 1 (/workspace/BOOT-INF/classes started by cnb in /workspace)
-2021-11-27 22:52:41 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - No active profile set, falling back to default profiles: default
-2021-11-27 22:52:58 [main] INFO  o.a.k.c.admin.AdminClientConfig - AdminClientConfig values: 
-	bootstrap.servers = [kafka-broker-1:9092, kafka-broker-2:9092, kafka-broker-3:9092]
-	client.dns.lookup = use_all_dns_ips
-	client.id = 
-	connections.max.idle.ms = 300000
-	default.api.timeout.ms = 60000
-	metadata.max.age.ms = 300000
-	metric.reporters = []
-	metrics.num.samples = 2
-	metrics.recording.level = INFO
-	metrics.sample.window.ms = 30000
-	receive.buffer.bytes = 65536
-	reconnect.backoff.max.ms = 1000
-	reconnect.backoff.ms = 50
-	request.timeout.ms = 30000
-	retries = 2147483647
-	retry.backoff.ms = 100
-	sasl.client.callback.handler.class = null
-	sasl.jaas.config = null
-	sasl.kerberos.kinit.cmd = /usr/bin/kinit
-	sasl.kerberos.min.time.before.relogin = 60000
-	sasl.kerberos.service.name = null
-	sasl.kerberos.ticket.renew.jitter = 0.05
-	sasl.kerberos.ticket.renew.window.factor = 0.8
-	sasl.login.callback.handler.class = null
-	sasl.login.class = null
-	sasl.login.refresh.buffer.seconds = 300
-	sasl.login.refresh.min.period.seconds = 60
-	sasl.login.refresh.window.factor = 0.8
-	sasl.login.refresh.window.jitter = 0.05
-	sasl.mechanism = GSSAPI
-	security.protocol = PLAINTEXT
-	security.providers = null
-	send.buffer.bytes = 131072
-	socket.connection.setup.timeout.max.ms = 30000
-	socket.connection.setup.timeout.ms = 10000
-	ssl.cipher.suites = null
-	ssl.enabled.protocols = [TLSv1.2, TLSv1.3]
-	ssl.endpoint.identification.algorithm = https
-	ssl.engine.factory.class = null
-	ssl.key.password = null
-	ssl.keymanager.algorithm = SunX509
-	ssl.keystore.certificate.chain = null
-	ssl.keystore.key = null
-	ssl.keystore.location = null
-	ssl.keystore.password = null
-	ssl.keystore.type = JKS
-	ssl.protocol = TLSv1.3
-	ssl.provider = null
-	ssl.secure.random.implementation = null
-	ssl.trustmanager.algorithm = PKIX
-	ssl.truststore.certificates = null
-	ssl.truststore.location = null
-	ssl.truststore.password = null
-	ssl.truststore.type = JKS
+2021-11-30 20:54:35 [main] ERROR o.s.b.d.LoggingFailureAnalysisReporter - 
 
-2021-11-27 22:53:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka version: 3.0.0
-2021-11-27 22:53:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka commitId: 8cb0a5e9d3441962
-2021-11-27 22:53:01 [main] INFO  o.a.kafka.common.utils.AppInfoParser - Kafka startTimeMs: 1638053581007
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:01 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:02 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:03 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:03 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:03 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:04 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:04 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:04 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:05 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:05 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:05 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:06 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:06 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:06 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:07 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:07 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:07 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:08 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:08 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:08 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:09 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:09 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:09 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:10 [main] INFO  o.s.b.w.e.netty.NettyWebServer - Netty started on port 8080
-2021-11-27 22:53:10 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Started TwitterToKafkaServiceApplication in 43.349 seconds (JVM running for 62.369)
-2021-11-27 22:53:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:10 [main] INFO  c.m.t.t.k.s.TwitterToKafkaServiceApplication - Application Starts
-2021-11-27 22:53:10 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Creating 1 topic(s), attempt 0
-2021-11-27 22:53:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:10 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:53:10 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:11 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:12 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:13 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:14 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:14 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -1 (kafka-broker-1/172.20.0.5:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:15 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -2 (kafka-broker-2/172.20.0.6:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:15 [kafka-admin-client-thread | adminclient-1] WARN  o.apache.kafka.clients.NetworkClient - [AdminClient clientId=adminclient-1] Connection to node -3 (kafka-broker-3/172.20.0.4:9092) could not be established. Broker may not be available.
-2021-11-27 22:53:23 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:53:27 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:53:35 [main] INFO  c.m.k.admin.client.KafkaAdminClient - Reading kafka topic [twitter-topic], attempt 0
-2021-11-27 22:53:35 [main] INFO  o.s.b.a.l.ConditionEvaluationReportLoggingListener - 
+***************************
+APPLICATION FAILED TO START
+***************************
 
-Error starting ApplicationContext. To display the conditions report re-run your application with 'debug' enabled.
-2021-11-27 22:53:36 [main] ERROR o.s.boot.SpringApplication - Application run failed
-java.lang.IllegalStateException: Failed to execute CommandLineRunner
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:770)
-	at org.springframework.boot.SpringApplication.callRunners(SpringApplication.java:751)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:309)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1301)
-	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1290)
-	at com.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication.main(TwitterToKafkaServiceApplication.java:27)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
-	at java.base/jdk.internal.reflect.NativeMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/jdk.internal.reflect.DelegatingMethodAccessorImpl.invoke(Unknown Source)
-	at java.base/java.lang.reflect.Method.invoke(Unknown Source)
-	at org.springframework.boot.loader.MainMethodRunner.run(MainMethodRunner.java:49)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:108)
-	at org.springframework.boot.loader.Launcher.launch(Launcher.java:58)
-	at org.springframework.boot.loader.JarLauncher.main(JarLauncher.java:88)
-Caused by: com.microservices.kafka.admin.exception.KafkaClientException: Reached the max number of retry for reading kafka topic(s)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.checkMaxRetry(KafkaAdminClient.java:99)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.checkTopicsCreated(KafkaAdminClient.java:63)
-	at com.microservices.kafka.admin.client.KafkaAdminClient.createTopic(KafkaAdminClient.java:52)
-	at com.microservices.twitter.to.kafka.service.init.impl.KafkaStreamInitializer.init(KafkaStreamInitializer.java:25)
-	at com.microservices.twitter.to.kafka.service.TwitterToKafkaServiceApplication.run(TwitterToKafkaServiceApplication.java:33)
-	at org.springframework.boot.SpringApplication.callRunner(SpringApplication.java:767)
-	... 13 common frames omitted
-2021-11-27 22:53:36 [main] INFO  c.m.k.p.s.impl.TwitterKafkaProducer - Closing kafka producer
-2021-11-27 22:53:36 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.utils.AppInfoParser - App info kafka.admin.client for adminclient-1 unregistered
-2021-11-27 22:53:36 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics scheduler closed
-2021-11-27 22:53:36 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Closing reporter org.apache.kafka.common.metrics.JmxReporter
-2021-11-27 22:53:36 [kafka-admin-client-thread | adminclient-1] INFO  o.a.kafka.common.metrics.Metrics - Metrics reporters closed
+Description:
+
+Your project setup is incompatible with our requirements due to following reasons:
+
+- Spring Boot [2.6.0] is not compatible with this Spring Cloud release train
+
+
+Action:
+
+Consider applying the following actions:
+
+- Change Spring Boot version to one of the following versions [2.4.x, 2.5.x] .
+You can find the latest Spring Boot versions here [https://spring.io/projects/spring-boot#learn]. 
+If you want to learn more about the Spring Cloud Release train compatibility, you can visit this page [https://spring.io/projects/spring-cloud#overview] and check the [Release Trains] section.
+If you want to disable this check, just set the property [spring.cloud.compatibility-verifier.enabled=false]
+
+

@@ -10,7 +10,8 @@
 		<module>kafka/kafka-admin</module>
 		<module>kafka/kafka-producer</module>
 		<module>common-config</module>
-	</modules>
+        <module>config-server</module>
+    </modules>
 	<parent>
 		<groupId>org.springframework.boot</groupId>
 		<artifactId>spring-boot-starter-parent</artifactId>
@@ -40,6 +41,10 @@
 		<kafka-producer.version>0.0.1-SNAPSHOT</kafka-producer.version>
 		<kafka-admin.version>0.0.1-SNAPSHOT</kafka-admin.version>
 		<kafka-model.version>0.0.1-SNAPSHOT</kafka-model.version>
+		<spring-cloud-config-server.version>2.2.8.RELEASE</spring-cloud-config-server.version>
+		<spring-cloud-dependencies.version>2021.0.0-RC1</spring-cloud-dependencies.version>
+		<spring-boot-autoconfigure.version>2.6.0</spring-boot-autoconfigure.version>
+		<spring-cloud-starter.version>2.2.8.RELEASE</spring-cloud-starter.version>
 	</properties>
 <!--	<repositories>
 		<repository>
@@ -94,6 +99,33 @@
 				<artifactId>spring-boot-starter-webflux</artifactId>
 				<version>${spring-webflux.version}</version>
 			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-config-server</artifactId>
+				<version>3.0.5</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter</artifactId>
+				<version>3.0.4</version>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-dependencies</artifactId>
+				<version>2020.0.3</version>
+				<type>pom</type>
+				<scope>import</scope>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.cloud</groupId>
+				<artifactId>spring-cloud-starter-bootstrap</artifactId>
+			</dependency>
+			<dependency>
+				<groupId>org.springframework.boot</groupId>
+				<artifactId>spring-boot-autoconfigure</artifactId>
+				<version>${spring-boot-autoconfigure.version}</version>
+			</dependency>
+
 			<dependency>
 				<groupId>org.twitter4j</groupId>
 				<artifactId>twitter4j-stream</artifactId>

@@ -1,0 +1,16 @@
+2021-11-30 21:36:27 [background-preinit] INFO  o.h.validator.internal.util.Version - HV000001: Hibernate Validator 6.2.0.Final
+2021-11-30 21:36:27 [main] INFO  c.m.config.server.ConfigServer - Starting ConfigServer using Java 11.0.12 on Egbes-MacBook-Pro.local with PID 41384 (/Users/megbe/Documents/eventsKafka/config-server/target/classes started by megbe in /Users/megbe/Documents/eventsKafka)
+2021-11-30 21:36:27 [main] INFO  c.m.config.server.ConfigServer - The following profiles are active: native
+2021-11-30 21:36:28 [main] INFO  o.s.cloud.context.scope.GenericScope - BeanFactory id=4bc7abe7-4cd2-38fb-82b1-21dec9ab49e9
+2021-11-30 21:36:29 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat initialized with port(s): 8888 (http)
+2021-11-30 21:36:29 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Initializing ProtocolHandler ["http-nio-8888"]
+2021-11-30 21:36:29 [main] INFO  o.a.catalina.core.StandardService - Starting service [Tomcat]
+2021-11-30 21:36:29 [main] INFO  o.a.catalina.core.StandardEngine - Starting Servlet engine: [Apache Tomcat/9.0.55]
+2021-11-30 21:36:29 [main] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring embedded WebApplicationContext
+2021-11-30 21:36:29 [main] INFO  o.s.b.w.s.c.ServletWebServerApplicationContext - Root WebApplicationContext: initialization completed in 2283 ms
+2021-11-30 21:36:30 [main] INFO  o.a.coyote.http11.Http11NioProtocol - Starting ProtocolHandler ["http-nio-8888"]
+2021-11-30 21:36:30 [main] INFO  o.s.b.w.e.tomcat.TomcatWebServer - Tomcat started on port(s): 8888 (http) with context path ''
+2021-11-30 21:36:30 [main] INFO  c.m.config.server.ConfigServer - Started ConfigServer in 9.786 seconds (JVM running for 11.338)
+2021-11-30 21:37:34 [http-nio-8888-exec-1] INFO  o.a.c.c.C.[Tomcat].[localhost].[/] - Initializing Spring DispatcherServlet 'dispatcherServlet'
+2021-11-30 21:37:34 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Initializing Servlet 'dispatcherServlet'
+2021-11-30 21:37:34 [http-nio-8888-exec-1] INFO  o.s.web.servlet.DispatcherServlet - Completed initialization in 11 ms
